@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "app_data.orders")
+@Table(name = "orders", schema = "practiceDB")
 public class OrdersDTO {
 	
 	@Id
@@ -18,7 +18,10 @@ public class OrdersDTO {
 	@Column(name="order_id")
 	private String orderId;
 	
+//	@Column(name="order_detail")
 	private String orderDetail;
+	
+	private String newColumn;
 
 	public long getId() {
 		return id;
@@ -43,6 +46,15 @@ public class OrdersDTO {
 	public void setOrderDetail(String orderDetail) {
 		this.orderDetail = orderDetail;
 	}
+
+	public String getNewColumn() {
+		return newColumn;
+	}
+
+	public void setNewColumn(String newColumn) {
+		this.newColumn = newColumn;
+	}
+	
 	
 	
 	

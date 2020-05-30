@@ -28,6 +28,9 @@ public class HibernateConfiguration {
 	
 	@Value("${hibernate.format_sql}")
 	private String formatSql;
+	
+	@Value("${hibernate.hbm2ddl.auto}")
+	private String hbm2ddlAuto;
 
 	public String getDriverClassName() {
 		return driverClassName;
@@ -83,6 +86,14 @@ public class HibernateConfiguration {
 
 	public void setFormatSql(String formatSql) {
 		this.formatSql = formatSql;
+	}
+
+	public String getHbm2ddlAuto() {
+		return hbm2ddlAuto;
+	}
+
+	public void setHbm2ddlAuto(String hbm2ddlAuto) {
+		this.hbm2ddlAuto = hbm2ddlAuto;
 	}
 
 	

@@ -1,5 +1,7 @@
 package com.hibernate.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,11 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public OrdersDTO findOrderById(long id) {
 		return orderDao.getOrder(id);
+	}
+
+	@Override
+	public List<OrdersDTO> getAllOrders(int pageNum, int pageSize) {
+		return orderDao.getAllOrders(pageNum, pageSize);
 	}
 
 }

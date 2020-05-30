@@ -42,8 +42,7 @@ public class BeanConfiguration {
 		hibernateProperties.put("hibernate.dialect", hibernateConfiguration.getDialect());
 		hibernateProperties.put("hibernate.show_sql", hibernateConfiguration.getShowSql());
 		hibernateProperties.put("hibernate.format_sql", hibernateConfiguration.getFormatSql());
-		
-//		hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
+		hibernateProperties.setProperty("hibernate.hbm2ddl.auto", hibernateConfiguration.getHbm2ddlAuto());
 		return hibernateProperties;
 	}
 	
